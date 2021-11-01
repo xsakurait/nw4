@@ -25,23 +25,7 @@ imageJで操作する
 マクロのウィンドウに操作のソースコード書いてあるので、コピーする
 plugins>New>Macroでそこにペースト
 
-inputdir = getDirectory("One above the image directory");// ディレクトリを指定
-dirlist = getFileList(inputdir);//画像ファイルを配列取得
-for(i=0;i<dirlist.length;i++){
-    inputdir2 = inputdir + dirlist[i];
-    filelist = getFileList(inputdir2);
-    for(k=0;k<filelist.length;k++){
-        print(filelist[k]);
-        openfile = inputdir2 + filelist[k];
-        open(openfile);
-        //Add Noise
-        run("Add Noise");
-        saveAs("Jpeg", openfile + "-Noise");
-        close();
-    }
-}
-ディレクトリかの画像データを全てにノイズ追加し、
-それを同ディレクトリの階層に保存
+
 
 作りたいアプリ　数次判定する
 見たノートが何の数字かわからないことが多々あるから
